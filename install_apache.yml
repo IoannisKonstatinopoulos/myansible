@@ -13,4 +13,5 @@
       name:
         - apache2
         - libapache2-mod-php
+      update_cache: yes
       state: latest
