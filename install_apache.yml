@@ -9,11 +9,11 @@
       update_cache: yes
     when: ansible_distribution == "Ubuntu"
 
-  - name: install apache2 package
+  - name: install apache package and php
     apt:
       name:
-        - apache2
-        - libapache2-mod-php
+        - "{{ apache_package }}"
+        - "{{ php_package }}"
       update_cache: yes
       state: latest
     when: ansible_distribution == "Ubuntu"
